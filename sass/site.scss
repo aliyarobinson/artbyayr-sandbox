@@ -88,7 +88,8 @@ img {
   font-size: 10px;
   letter-spacing: 1px;
   width: 100%;
-  max-width: 200px;
+  max-width: 300px;
+  margin: 20px 0 0;
 }
 
 .hide-copy {
@@ -160,6 +161,38 @@ img {
 .block-4-wide {
   width: 100%;
   max-width: $wrapper-width;
+}
+
+
+/*******************************
+
+  Social Link Block
+
+*******************************/
+
+.social {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 120px;
+}
+
+.social-item {
+  float: left;
+  width: 100%;
+  max-width: 30px;
+  height: 30px;
+
+}
+
+.social .icon {
+  font: 100 20px 'fontawesome', sans-serif;
+  display: inline-block;
+  margin: 5px;
+  transition: 400ms;
+
+  &:hover {
+    color: #999;
+  }
 }
 
 
@@ -260,7 +293,7 @@ img {
 
 .site-nav {
   float: right;
-  top: 56px;
+  // top: 56px;
   position: relative;
   height:auto;
 }
@@ -319,18 +352,6 @@ img {
   position: absolute;
   margin: 0 -50% 0 0;
   transform: translateX(-20%);
-}
-
-[data-content="projects"] span {
-  color: $purple;
-}
-
-[data-content="resume"] span {
-  color: $clay;
-}
-
-[data-content="contact"] span {
-  color: $melon;
 }
 
 .social-nav {
@@ -453,38 +474,49 @@ img {
       width: 44%;
       height: 200px;
       float: left;
-      border: solid 4px #ccc;
-      margin: 0 0 30px;
+      border: solid 4px transparent;
+      // margin: 0 0 30px;
       position: relative;
-      background: url('../img/art/car.jpg') right center no-repeat;
+      background-image: url('../img/art/TheForestc2.jpg');
+      background-position: 0px center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
       &:nth-child(even) {
         float: right;
       }
 
-      &:before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0px;
-        display: block;
-        background: url('../img/item-fgnd-fade.svg');
-        background-position: -2px center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        pointer-events: none;
+      &:nth-child(2) {
+        background-image: url('../img/interactive/aliyarobinson.png');
       }
 
-      &:hover {
-        border-width: 10px;
-      }
+      // &:nth-child(3) {
+      //   background-image: url('../img/art/TheUniverse.png');
+      // }
 
+      // &:nth-child(4) {
+      //   background-image: url('../img/art/mountaian_canvas.jpg');
+      // }
+
+      // &:before {
+      //   content: '';
+      //   width: 100%;
+      //   height: 100%;
+      //   left: 0;
+      //   top: 0px;
+      //   display: block;
+      //   background: url('../img/item-fgnd-fade-2.png');
+      //   background-position: -70px center;
+      //   background-repeat: no-repeat;
+      //   background-size: cover;
+      //   pointer-events: none;
+      // }
+      
       a {
         display: block;
         width: 100%;
-        height: 100%;
-        top: 0;
+        height: calc(100% + 10px);
+        top: -5px;
         left: 0;
         position: absolute;
       }
@@ -493,16 +525,25 @@ img {
         width: 100%;
         max-width: 200px;
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
-        border: 1px solid #ccc;
-        border-style: solid solid none none;
+        // border: 1px solid #ccc;
+        // border-style: solid solid none none;
         background: url(../img/item-title-bkgd-2.svg);
         background-position: -2px 0;
         background-repeat: no-repeat;
         background-size: cover;
         padding: 5px 0px 0px 10px;
       }
+
+      &:hover {
+        border-width: 10px;
+
+        .item-title {
+          top: -8px;
+        }
+      }
+
     }
 
 
@@ -527,62 +568,7 @@ img {
   padding: 0;
 }
 
-.site-footer .block-title {
-  font-size: 18px;
-  display: block;
-  border: 1px solid;
-  border-style: none none solid none;
-  margin: 0 0 20px;
-}
 
-.site-footer .block-title span {
-  font: 22px 'alex_brush', arial, sans-serif;
-  display: block;
-}
-
-
-.favorites {
-    a {
-      transition: 200ms;
-      &:hover {
-        color: $purple;
-      }
-    }
-}
-
-.site-footer .favorites .block {
-  padding: 0 20px 20px 0;
-  height: 120px;
-}
-
-.site-footer .fav-title a {
-  font-weight: 500;
-}
-
-.site-footer .fav-desc {
-  padding: 0 0 0 20px;
-}
-
-
-.site-footer .social-item {
-  float: left;
-  width: 100%;
-  max-width: 40px;
-  height: 40px;
-
-}
-
-.site-footer .social .icon,
-.old-browser-prompt .icon {
-  font: 30px 'fontawesome', sans-serif;
-  display: inline-block;
-  margin: 10px;
-  transition: 400ms;
-
-  &:hover {
-    color: #999;
-  }
-}
 
 .current-content{
   opacity: 1;
@@ -625,67 +611,6 @@ img {
   opacity: 0;
   margin: 0;
   overflow: hidden;
-}
-
-.slide-out {
-  left: -3000px;
-}
-
-.slide-in {
-  left: 0;
-}
-
-.old-browser-prompt {
-  position: absolute;
-  background: #fff;
-  top: 50%;
-  color: $font-color;
-  border: 1px solid $font-color-light;
-  width: 90%;
-  max-width: 500px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 20px;
-  z-index: 10;
-
-  .title {
-    border: 1px solid $font-color;
-    border-style: none none solid;
-    font-size: 22px;
-    margin: 0 0 20px;
-  }
-
-  .description {
-    p {
-      margin: 10px 0;
-    }
-  }
-
-  .new-browsers {
-    text-align: center;
-
-    .browser-link {
-      display: inline-block;
-
-      a {
-        color: $font-color;
-      }
-    }
-  }
-
-  .warning {
-    color: $clay;
-  }
-
-  .close {
-    width: 40px;
-    height: 40px;
-    color: $font-color;
-    position:absolute;
-    top: 0px;
-    right: 0;
-  }
 }
 
 .loader-wrapper{

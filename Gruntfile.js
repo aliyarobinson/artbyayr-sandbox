@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		},
 		concat: {
 			task: {
-				src: ['js/ayrUtils.js', 'js/d3.js', 'js/script.js'], 
+				src: ['js/script.js'], 
 				dest: 'js/bundle.js'
 			},
 			options: {
@@ -21,10 +21,11 @@ module.exports = function(grunt) {
 				'banner': '',
 				'footer': '',
 				'stripBanners': false,
-				'process': false,
-				'sourceMap': false,
-				'sourceMapName': undefined,
-				'sourceMapStyle': 'embed'
+				'process': false
+				// ,
+				// 'sourceMap': false,
+				// 'sourceMapName': undefined,
+				// 'sourceMapStyle': 'embed'
 			}
 		},
 		cssmin: {
@@ -65,22 +66,22 @@ module.exports = function(grunt) {
 				dest: 'css/style.css'
 			},
 			options: {
-				'sourcemap': 'auto',
-				'trace': false,
-				'unixNewlines': false,
-				'check': false,
-				'style': 'nested',
-				'precision': 3,
-				'quiet': false,
-				'compass': false,
-				'debugInfo': false,
-				'lineNumbers': false,
-				'loadPath': [],
-				'require': [],
-				'cacheLocation': '.sass-cache',
-				'noCache': false,
-				'bundleExec': false,
-				'update': false
+				// 'sourcemap': 'auto',
+				// 'trace': false,
+				// 'unixNewlines': false,
+				// 'check': false,
+				// 'style': 'nested',
+				// 'precision': 3,
+				// 'quiet': false,
+				// 'compass': false,
+				// 'debugInfo': false,
+				// 'lineNumbers': false,
+				// 'loadPath': [],
+				// 'require': [],
+				// 'cacheLocation': '.sass-cache',
+				// 'noCache': false,
+				// 'bundleExec': false,
+				// 'update': false
 			}
 		},
 		watch: {
