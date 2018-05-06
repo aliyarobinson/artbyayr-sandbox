@@ -463,7 +463,10 @@ img {
   position: absolute;
   bottom: 12px;
   left: 0;
-  background: #767676;
+  background: -moz-linear-gradient(left, #767676 0%, rgba(118, 118, 118, 0) 100%);
+  background: -webkit-linear-gradient(left, #767676 0%, rgba(118, 118, 118, 0) 100%);
+  background: linear-gradient(to right, #767676 0%, rgba(118, 118, 118, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#767676", endColorstr="#00767676",GradientType=1 );
   transition: 400ms;
 }
 .site-nav li:hover:after {

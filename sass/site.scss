@@ -343,7 +343,11 @@ img {
     position: absolute;
     bottom: 12px;
     left: 0;
-    background: #767676;
+    // background: #767676;
+    background: -moz-linear-gradient(left, rgba(118,118,118,1) 0%, rgba(118,118,118,0) 100%);
+background: -webkit-linear-gradient(left, rgba(118,118,118,1) 0%,rgba(118,118,118,0) 100%);
+background: linear-gradient(to right, rgba(118,118,118,1) 0%,rgba(118,118,118,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', endColorstr='#00767676',GradientType=1 );
     transition: 400ms;
   }
 
