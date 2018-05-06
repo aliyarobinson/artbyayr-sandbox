@@ -222,12 +222,13 @@ img {
 }
 
 .legal {
-  color: #fff;
-  font-size: 10px;
+  color: #767676;
+  font-size: 12px;
   letter-spacing: 1px;
-  width: 100%;
-  max-width: 300px;
-  margin: 20px 0 0;
+  float: left;
+  position: relative;
+  top: 10px;
+  display: inline-block;
 }
 
 .hide-copy {
@@ -420,9 +421,10 @@ img {
 
 *******************************/
 .site-nav {
-  float: right;
-  position: relative;
+  position: absolute;
   height: auto;
+  top: 25px;
+  right: 0;
 }
 
 .site-nav ul {
@@ -454,6 +456,19 @@ img {
 .site-nav li a:hover .border-line {
   opacity: 1;
 }
+.site-nav li:after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  background: #767676;
+  transition: 400ms;
+}
+.site-nav li:hover:after {
+  width: 100%;
+}
 
 .site-nav li:first-child {
   margin: 0;
@@ -471,6 +486,21 @@ img {
   position: absolute;
   margin: 0 -50% 0 0;
   transform: translateX(-20%);
+}
+
+.sub-nav {
+  float: right;
+}
+.sub-nav li {
+  float: left;
+  margin: 0 10px 0 0;
+}
+.sub-nav a {
+  font-size: 12px;
+}
+.sub-nav span {
+  display: block;
+  font: 22px "alex_brush", arial, sans-serif;
 }
 
 .social-nav {
@@ -547,20 +577,17 @@ img {
 }
 
 .quote blockquote {
-  text-align: left;
-  font: 40px "alex_brush", arial, sans-serif;
+  text-align: center;
+  font: 25px "alex_brush", arial, sans-serif;
   margin: 60px auto 0;
-  padding: 0 0 34px;
-  width: 93.75%;
+  /* padding: 0 100px; */
+  width: 60%;
   max-width: 960px;
   position: relative;
 }
 
 .quote blockquote cite {
-  left: 0;
-  font: 100 22px "work_sans", arial, sans-serif;
-  position: absolute;
-  bottom: 0;
+  font: 100 18px "work_sans", arial, sans-serif;
 }
 
 .page-title {
@@ -577,11 +604,11 @@ img {
 .home .collections .collection-item {
   transition: 200ms;
   width: 44%;
-  height: 200px;
+  height: 300px;
   float: left;
   border: solid 4px transparent;
   position: relative;
-  background-image: url("../img/art/TheForestc2.jpg");
+  background-image: url("../img/art/TheUniverse.png");
   background-position: 0px center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -602,21 +629,16 @@ img {
 }
 .home .collections .collection-item .item-title {
   width: 100%;
-  max-width: 200px;
   position: absolute;
-  top: 0;
-  left: 0;
-  background: url(../img/item-title-bkgd-2.svg);
-  background-position: -2px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 5px 0px 0px 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.92);
 }
 .home .collections .collection-item:hover {
   border-width: 10px;
-}
-.home .collections .collection-item:hover .item-title {
-  top: -8px;
 }
 
 /*******************************
@@ -625,14 +647,12 @@ img {
 
 *******************************/
 .site-footer {
-  background: rgba(153, 153, 153, 0.65);
   padding: 20px 0;
-  color: #fff;
+  color: #767676;
   margin: 100px 0 0;
 }
-
-.site-footer .block:first-child {
-  padding: 0;
+.site-footer .social {
+  float: right;
 }
 
 .current-content {
