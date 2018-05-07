@@ -649,6 +649,11 @@ img {
   Grid Sort Styles
 
 *******************************/
+.grid-sort .grid-nav {
+  hieght: 100px;
+  position: relative;
+  z-index: 2;
+}
 .grid-sort .grid-nav li {
   float: left;
   margin: 0 10px 0 0;
@@ -657,12 +662,16 @@ img {
   color: #767676;
   font: 100 18px "work_sans", arial, sans-serif;
 }
+.grid-sort .grid {
+  position: relative;
+  top: 60px;
+  z-index: 1;
+}
 .grid-sort .grid-item {
   float: left;
   width: 45%;
   margin: 0 0 30px;
-  height: 100%;
-  max-height: 300px;
+  height: 300px;
 }
 
 /*******************************
