@@ -582,6 +582,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
 }
 
 
+
+
+/*******************************
+
+  Grid Sort Styles
+
+*******************************/
+
+
+
+.grid-sort {
+
+  .grid-nav {
+
+    li {
+      float: left;
+      margin: 0 10px 0 0 ;
+    }
+
+    button {
+      color: #767676;
+      font: 100 18px 'work_sans', arial, sans-serif;
+    }
+
+  }
+
+  .grid-item { 
+    float: left;
+    width: 45%;
+    margin: 0 0 30px;
+    height: 100%;
+    max-height: 300px;
+  }
+
+}
+
 /*******************************
 
   Footer Styles
