@@ -6,6 +6,7 @@ var AYR = AYR || {};
   // var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
   var last_known_scroll_position = 0;
   var ticking = false;
+  var siteHeader = document.querySelector('.site-header');
   
   AYR = {
 
@@ -40,7 +41,7 @@ var AYR = AYR || {};
     });
 
     $( window ).resize(function() {
-      $('.grid').isotope({
+      $('.grid-fluid').isotope({
       // update columnWidth to a percentage of container width
       masonry: { columnWidth: $('.grid').width() / 4 }
       });
@@ -53,7 +54,7 @@ var AYR = AYR || {};
     // Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
 
     function doSomething(scroll_pos) {
-      if(ayrApi.isMobile() === false) {
+      if(AYR.isMobile() === false) {
         if(last_known_scroll_position >= 100 ){
           siteHeader.classList.add('small');
         }else{
@@ -75,9 +76,14 @@ var AYR = AYR || {};
     });
 
      
-    }// end init
+    }, // end init
 
-  
+    isMobile: function(){
+      var maxWidth = 768
+        , iPadDevice = null != navigator.userAgent.match(/iPad/i)
+        , w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      return w < maxWidth || iPadDevice ? !0 : !1
+    }
   } // end AYR
 
 })();

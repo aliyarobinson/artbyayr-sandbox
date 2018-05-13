@@ -156,12 +156,14 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow: visible;
 }
 
 html {
   background-image: url(../img/painting-bkgd-bw.png);
-  background-position: center center, left top;
+  background-position: center center, left -90px;
   background-repeat: no-repeat, repeat;
+  background-attachment: fixed;
 }
 
 body {
@@ -351,12 +353,14 @@ img {
 .site-header .wrapper {
   height: 100%;
   position: relative;
+  overflow: visible;
 }
 
 .logo-wrapper {
   width: 180px;
   height: 130px;
   float: left;
+  z-index: 1;
 }
 .logo-wrapper a {
   display: inline-block;
@@ -516,7 +520,7 @@ img {
 }
 
 .site-content {
-  z-index: 1;
+  z-index: 2;
   opacity: 1;
   pointer-events: auto;
   position: relative;
@@ -524,15 +528,11 @@ img {
 
 .site-header.small {
   height: 90px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.98);
   padding: 0;
   margin: 0;
   border: 1px rgba(137, 124, 141, 0.5);
   border-style: none none solid;
-}
-.site-header.small .site-nav ul {
-  position: relative;
-  top: 12px;
 }
 .site-header.small .logo-wrapper {
   width: 170px;
@@ -544,18 +544,8 @@ img {
 }
 .site-header.small .logo-wrapper a img {
   position: relative;
-  top: 4px;
+  top: -5px;
 }
-.site-header.small .site-nav {
-  top: 4px;
-}
-.site-header.small .site-nav li a {
-  font-size: 20px;
-}
-.site-header.small .site-nav li a span {
-  font: 20px "alex_brush", arial, sans-serif;
-}
-
 .site-header.mobile-active .site-nav ul {
   position: relative;
   top: 50%;
@@ -650,7 +640,7 @@ img {
 
 *******************************/
 .grid-sort .grid-nav {
-  hieght: 100px;
+  margin: 0 0 60px;
   position: relative;
   z-index: 2;
 }
@@ -674,6 +664,9 @@ img {
   margin: 0 0 20px;
   margin-right: 0.5%;
   border: solid 1px;
+}
+.grid-sort .grid-sizer {
+  border: none;
 }
 
 /*******************************

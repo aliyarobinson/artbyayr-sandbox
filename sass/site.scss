@@ -15,13 +15,15 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow: visible;
 }
 
 html {
   background-image: url(../img/painting-bkgd-bw.png);
   // background-image: url(../img/painting-bkgd.png), url(../img/fabric_plaid.png);
-  background-position: center center, left top;
+  background-position: center center, left -90px;
   background-repeat: no-repeat, repeat;
+  background-attachment: fixed;
 }
 
 body {
@@ -220,12 +222,14 @@ img {
 .site-header .wrapper {
   height: 100%;
   position: relative;
+  overflow: visible;
 }
 
 .logo-wrapper {
   width: 180px;
   height: 130px;
   float: left;
+  z-index: 1;
 
   a {
     display: inline-block;
@@ -404,7 +408,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
 .content-wrapper {}
 
 .site-content {
-  z-index: 1;
+  z-index: 2;
   opacity: 1;
   pointer-events: auto;
   position: relative;
@@ -413,15 +417,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
 
 .site-header.small {
   height: 90px;
-  background: rgba(255,255,255, 0.8);
+  background: rgba(255,255,255, 0.98);
   padding: 0;
   margin: 0;
   border: 1px rgba(137, 124, 141, 0.5);
   border-style: none none solid;
 
   .site-nav ul {
-    position: relative;
-    top: 12px;
+    // position: relative;
+    // top: 12px;
   }
 
   .logo-wrapper {
@@ -434,21 +438,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
 
       img {
         position: relative;
-        top: 4px;
+        top: -5px;
       }
     }
   }
 
   .site-nav {
-    top: 4px;
+    // top: 4px;
   }
 
   .site-nav li a {
-    font-size: 20px;
+    // font-size: 20px;
   }
 
   .site-nav li a span {
-    font: 20px 'alex_brush', arial, sans-serif;
+    // font: 20px 'alex_brush', arial, sans-serif;
   }
 }
 
@@ -596,7 +600,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
 
   .grid-nav {
 
-    hieght: 100px;
+    margin: 0 0 60px;
     position: relative;
     z-index: 2;
 
@@ -625,6 +629,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
     margin: 0 0 20px;
     margin-right: 0.5%;
     border: solid 1px;
+  }
+
+  .grid-sizer {
+    border: none;
   }
 
 }
