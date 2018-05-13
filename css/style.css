@@ -159,7 +159,7 @@ html {
 }
 
 html {
-  background-image: url(../img/painting-bkgd.png);
+  background-image: url(../img/painting-bkgd-bw.png);
   background-position: center center, left top;
   background-repeat: no-repeat, repeat;
 }
@@ -535,8 +535,8 @@ img {
   top: 12px;
 }
 .site-header.small .logo-wrapper {
-  width: 100px;
-  height: 60px;
+  width: 170px;
+  top: -9px;
 }
 .site-header.small .logo-wrapper a {
   display: inline-block;
@@ -667,11 +667,13 @@ img {
   top: 60px;
   z-index: 1;
 }
+.grid-sort .grid-sizer,
 .grid-sort .grid-item {
   float: left;
-  width: 45%;
-  margin: 0 0 30px;
-  height: 300px;
+  width: 35%;
+  margin: 0 0 20px;
+  margin-right: 0.5%;
+  border: solid 1px;
 }
 
 /*******************************
