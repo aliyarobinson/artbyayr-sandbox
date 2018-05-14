@@ -664,6 +664,17 @@ img {
   margin: 0 0 20px;
   margin-right: 0.5%;
   border: solid 1px;
+  transition: 400ms;
+}
+.grid-sort .grid-sizer.active,
+.grid-sort .grid-item.active {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  background: #fff;
 }
 .grid-sort .grid-sizer {
   border: none;
