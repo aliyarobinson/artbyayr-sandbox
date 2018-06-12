@@ -12,6 +12,7 @@ var AYR = AYR || {};
   let menuBtn = document.querySelector('.menu-btn');
   let topTrigger = $('.top-trigger');
   let gridTrigger = $('.grid-trigger');
+  let gridNav = $('.grid-nav');
   let gridItem = document.querySelectorAll('.grid-item img');
   let clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
 
@@ -25,7 +26,7 @@ var AYR = AYR || {};
     // filter items on button click
     $('.site-footer').on( 'click', '.top-trigger', function() {
       console.log('t-top');
-      AYR.scrollTop();
+      AYR.scrollTop(0);
     });
 
     $('.grid-fluid').imagesLoaded( function() {
@@ -78,10 +79,24 @@ var AYR = AYR || {};
     var doSomething = (scroll_pos) => {
     // function doSomething(scroll_pos) {
       if(AYR.isMobile() === false) {
+
+        
         if(last_known_scroll_position >= 100 ){
           siteHeader.classList.add('small');
-        }else{
+          topTrigger.addClass('active');
+        }
+        
+        if(last_known_scroll_position >= 200 ) {
+          gridNav.addClass('active');
+        } 
+        
+        if(last_known_scroll_position < 100 ){
           siteHeader.classList.remove('small');
+          topTrigger.removeClass('active');
+        }
+
+        if(last_known_scroll_position < 200 ){
+          gridNav.removeClass('active');
         }
       }
     }
@@ -89,6 +104,7 @@ var AYR = AYR || {};
     window.addEventListener('scroll', function(e) {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       last_known_scroll_position = scrollTop;
+      console.log('scrollpos: ', last_known_scroll_position);
       if (!ticking) {
         window.requestAnimationFrame(function() {
           doSomething(last_known_scroll_position);

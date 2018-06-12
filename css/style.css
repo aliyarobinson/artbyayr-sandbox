@@ -527,7 +527,7 @@ img {
 }
 
 .site-header.small {
-  height: 90px;
+  height: 70px;
   background: rgba(255, 255, 255, 0.98);
   padding: 0;
   margin: 0;
@@ -535,7 +535,7 @@ img {
   border-style: none none solid;
 }
 .site-header.small .logo-wrapper {
-  width: 170px;
+  width: 134px;
   top: -9px;
 }
 .site-header.small .logo-wrapper a {
@@ -546,6 +546,13 @@ img {
   position: relative;
   top: -5px;
 }
+.site-header.small .site-nav {
+  line-height: 18px;
+}
+.site-header.small .site-nav li a {
+  font-size: 18px;
+}
+
 .site-header.mobile-active .site-nav ul {
   position: relative;
   top: 50%;
@@ -640,12 +647,36 @@ img {
 
 *******************************/
 .grid-sort .grid-nav {
-  margin: 0 0 60px;
+  margin: 48px 0 60px;
   position: relative;
   z-index: 2;
+  text-align: center;
+  width: 100%;
+  transition: 400ms;
+  background: transparent;
+}
+.grid-sort .grid-nav:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 38px;
+  margin: 0 0 10px;
+  background: -moz-linear-gradient(left, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.83) 50%, rgba(118, 118, 118, 0) 100%);
+  background: -webkit-linear-gradient(left, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.83) 50%, rgba(118, 118, 118, 0) 100%);
+  background: linear-gradient(to right, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.83) 50%, rgba(118, 118, 118, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00767676", endColorstr="#00767676",GradientType=1 );
+}
+.grid-sort .grid-nav.active {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.85);
+  left: 0;
+  top: 22px;
+  line-height: 40px;
 }
 .grid-sort .grid-nav li {
-  float: left;
+  display: inline-block;
   margin: 0 10px 0 0;
 }
 .grid-sort .grid-nav button {
@@ -712,6 +743,16 @@ img {
   Footer Styles
 
 *******************************/
+.top-trigger {
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  opacity: 0;
+  transition: 400ms;
+}
+.top-trigger.active {
+  opacity: 1;
+}
 .top-trigger .icon {
   height: 40px;
   width: 40px;
