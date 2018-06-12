@@ -1,15 +1,19 @@
+"use strict";
+
 var AYR = AYR || {};
 
 (function(){
 
   // If ontouchstart exists then set click handler to touchstart otherwise set clickhandler to click
-  // var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
-  var last_known_scroll_position = 0;
-  var ticking = false;
-  var siteHeader = document.querySelector('.site-header');
-  var menuBtn = document.querySelector('.menu-btn');
-  var gridItem = document.querySelectorAll('.grid-item img');
-  var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
+  // let clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
+  let last_known_scroll_position = 0;
+  let ticking = false;
+  let siteHeader = document.querySelector('.site-header');
+  let menuBtn = document.querySelector('.menu-btn');
+  let topTrigger = $('.top-trigger');
+  let gridTrigger = $('.grid-trigger');
+  let gridItem = document.querySelectorAll('.grid-item img');
+  let clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
 
   
   AYR = {
@@ -18,38 +22,51 @@ var AYR = AYR || {};
 
     $(window).trigger('resize');
 
-
-    /**************************************/
-    /*   Grid Navigation Trigger
-    /***************************************************/
-    // init Isotope
-    var $grid = $('.grid-fluid').isotope({
-      // options
-    });
-
-    $('.grid-fluid').isotope({
-      // set itemSelector so .grid-sizer is not used in layout
-      itemSelector: '.grid-item',
-      percentPosition: true,
-      masonry: {
-        // use element for option
-        columnWidth: '.grid-sizer'
-      }
-    })
-
     // filter items on button click
-    $('.grid-nav').on( 'click', 'button', function() {
-      console.log('tt');
-      var filterValue = $(this).attr('data-filter');
-      $grid.isotope({ filter: filterValue });
+    $('.site-footer').on( 'click', '.top-trigger', function() {
+      console.log('t-top');
+      AYR.scrollTop();
     });
 
-    $( window ).resize(function() {
-      $('.grid-fluid').isotope({
-      // update columnWidth to a percentage of container width
-      masonry: { columnWidth: $('.grid').width() / 4 }
+    $('.grid-fluid').imagesLoaded( function() {
+
+      /**************************************/
+      /*   Grid Navigation Trigger
+      /***************************************************/
+      // init Isotope
+      let $grid = $('.grid-fluid').isotope({
+        // options
       });
+
+      $('.grid-fluid').isotope({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        masonry: {
+          // use element for option
+          columnWidth: '.grid-sizer'
+        }
+      })
+
+      // filter items on button click
+      $('.grid-nav, .site-nav').on( 'click', 'button', function() {
+        console.log('tt');
+        AYR.scrollTop(300);
+        let filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+      });
+
+      $( window ).resize(function() {
+        $('.grid-fluid').isotope({
+        // update columnWidth to a percentage of container width
+        masonry: { columnWidth: $('.grid-fluid').width() / 2 }
+        });
+      });
+
     });
+
+
+    
 
     /**************************************/
     /*   Window Scroll
@@ -57,7 +74,8 @@ var AYR = AYR || {};
     // Reference: https://developer.mozilla.org/en-US/docs/Web/Events/scroll
     // Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
 
-    function doSomething(scroll_pos) {
+    var doSomething = (scroll_pos) => {
+    // function doSomething(scroll_pos) {
       if(AYR.isMobile() === false) {
         if(last_known_scroll_position >= 100 ){
           siteHeader.classList.add('small');
@@ -68,7 +86,7 @@ var AYR = AYR || {};
     }
 
     window.addEventListener('scroll', function(e) {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       last_known_scroll_position = scrollTop;
       if (!ticking) {
         window.requestAnimationFrame(function() {
@@ -83,7 +101,7 @@ var AYR = AYR || {};
     //   this.parentNode.parentNode.classList.toggle('active');
     // });
 
-    for (var i = 0; i < gridItem.length; i++) {
+    for (let i = 0; i < gridItem.length; i++) {
       gridItem[i].addEventListener(clickHandler, function(e) { 
         e.preventDefault();
         this.parentNode.parentNode.classList.toggle('active');
@@ -103,10 +121,17 @@ var AYR = AYR || {};
     }, // end init
 
     isMobile: function(){
-      var maxWidth = 768
+      let maxWidth = 768
         , iPadDevice = null != navigator.userAgent.match(/iPad/i)
         , w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
       return w < maxWidth || iPadDevice ? !0 : !1
+    },
+
+    scrollTop: function(topOffset) {
+      console.log('************** scrollTop fired *****************');
+      $('html,body').animate({
+          scrollTop: $('html,body').offset().top  + topOffset
+      }, 1000);
     }
   } // end AYR
 

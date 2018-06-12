@@ -625,10 +625,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
   .grid-sizer,
   .grid-item { 
     float: left;
-    width: 35%;
-    margin: 0 0 20px;
-    margin-right: 0.5%;
-    border: solid 1px;
+    width: 32%;
+    // margin: 0 0 20px;
+    // margin-right: 0.5%;
+    // border: solid 1px;
     transition: 400ms;
 
     &.active {
@@ -653,6 +653,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
   Footer Styles
 
 *******************************/
+
+.top-trigger .icon {
+    height: 40px;
+    width: 40px;
+    fill: #414042;
+}
+
 .site-footer {
   padding: 20px 0;
   color: #767676;
@@ -1404,43 +1411,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
     font-size: 20px;
   }
 
-  .resume {
-    .block {
-      width: 100%;
-      max-width: none;
-    }
+ 
+  .grid-sort .grid-item { 
+    float: left;
+    width: 48%;
   }
-
-  .project {
-    .slanted-divider {
-      right: 70px;
-    }
-
-    &:hover {
-      .slanted-divider,
-      .proj-title-block,
-      .proj-tools-block {
-        opacity: 0;
-      }
-
-      .project-content .cta-block {
-        right: 25%;
-      }
-    }
-  }
-  
-  .proj-year-block {
-    display: none;
-  }
-
-  .cta-btn {
-    width: 100%;
-  }
-
-  .project-content > * {
-    width: 30%;
-  }
-
   .site-footer .wrapper > .block {
     width: 100%;
     max-width: none;
@@ -1463,37 +1438,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
     max-width: none;
   }
 
-
-  .project-content {
-    
-    > * {
-      width: 50%;
-    }
-
-    .proj-year-block,
-    .proj-tools-block {
-      opacity: 0;
-    }
-
-    &:hover {}
-  }
-
-  .experience-mod .position-title {
-    padding-bottom: 0px;
-  }
-
-  .experience-mod .date {
-    position: relative;
-    right: 0;
-    top: 0;
-    float: none;
-    text-align: left;
-  }
-
-  .experience-mod .position-desc {
-    padding: 10px 0 0;
-  }
+ 
 }
+
 @media screen and (max-width: 500px) {
   .homepage-intro .title {
     font: 60px/1em 'alex_brush', arial, sans-serif;

@@ -37,8 +37,10 @@
       
       <nav class="site-nav" role="navigation">
         <ul>
-          <li><a href="art.html">Art</a></li>
-          <li><a href="interactive.html">Interactive</a></li>
+          <!-- <li><a href="art.html" class="grid-filter">Art</a></li>
+          <li><a href="interactive.html" class="grid-filter">Interactive</a></li> -->
+          <li><button data-filter=".art">Art</button></li>
+          <li><button data-filter=".interactive">Interactive</button></li>
           <li>
             <a href="https://www.redbubble.com/people/artbyayr" target="_blank">Shop 
               <span aria-hidden="true" class="icon fa fa-external-link-alt"></span>
@@ -48,17 +50,70 @@
       </nav>
     </div>
   </header>
-  <main class="site-content" role="main">
+   <main class="site-content" role="main">
     <div class="content-container">
       <section class="homepage-intro wrapper">
           <div class="title">A.Y. Robinson</div>
           <div class="subtitle">Digital Artist &bull; Interactive Developer &bull; Illustrator</div>
           
       </section>
-      <section class="collections wrapper">
-        <ul>
-          <li class="collection-item"><a href="art.html"><span class="item-title">Art Collections</span></a></li>
-          <li class="collection-item"><a href="interactive.html"><span class="item-title">Interactive Projects</span></a></li>
+      <section class="grid-sort wrapper">
+        
+        <ul class="grid-fluid">
+          <div class="grid-sizer"></div>
+          <li class="grid-item digital art">
+            <a href="#">
+              <img src="./img/art/seduction-painting-trans-1.png" alt="seduction painting">
+              <span class="item-title">Seduction</span>
+            </a>
+          </li>
+          <li class="grid-item wordpress interactive">
+            <a href="#">
+              <img src="./img/interactive/pjtwebsite.png" alt="project tsehigh">
+              <span class="item-title">Project Tsehigh</span>
+            </a>
+          </li>
+          <li class="grid-item digital art">
+            <a href="#">
+              <img src="./img/art/TheLightbulb_3.png" alt="Aliya Robinson">
+              <span class="item-title">Solar Flare</span>
+            </a>
+          </li>
+          <li class="grid-item sketch art">
+            <a href="#">
+              <img src="./img/art/in-my-dreams.jpg" alt="in my dreams">
+              <span class="item-title">In My Dreams</span>
+            </a>
+          </li>
+          <li class="grid-item wordpress interactive">
+            <a href="#">
+              <img src="./img/interactive/oksanatanasiv.png" alt="oksana tanasiv">
+              <span class="item-title">Oksana Tanasiv</span>
+            </a>
+          </li>
+          <li class="grid-item github-page interactive">
+            <a href="#">
+              <img src="./img/interactive/aliyarobinson.png" alt="Aliya Robinson">
+              <span class="item-title">Aliya Robinson (previous website)</span>
+            </a>
+          </li>
+          <li class="grid-item sketch art">
+            <a href="#">
+              <img src="./img/art/birds-eye-view.jpg" alt="Hakim Robinson">
+              <span class="item-title">Birds Eye View</span>
+            </a>
+          </li><li class="grid-item digital art">
+            <a href="#">
+              <img src="./img/art/wolf-mountain_sm.png" alt="Hakim Robinson">
+              <span class="item-title">Aries Wolf</span>
+            </a>
+          </li>
+          <li class="grid-item github-page interactive">
+            <a href="#">
+              <img src="./img/interactive/hakimrobinson.png" alt="Hakim Robinson">
+              <span class="item-title">Hakim Robinson</span>
+            </a>
+          </li>
         </ul>
         
       </section>
@@ -72,6 +127,14 @@
   </main>
   <footer class="site-footer">
     <div class="wrapper">
+      <button class="top-trigger">
+        <svg aria-hidden="true" class="icon" preserveAspectRatio="xMinYMin meet" viewBox="0 0 305 287.5" xmlns="http://www.w3.org/2000/svg">
+          <path d="m 134.74892,286.39011 c -6.33746,-1.33789 -14.22381,-6.79589 -16.90156,-11.69727 -2.0449,-3.74301 -2.25118,-9.85062 -2.58327,-76.48698 l -0.3609,-72.41914 -31.514096,31.36879 C 48.877707,191.50779 47.503234,192.47159 35.576016,190.68299 30.246124,189.88372 28.429054,188.60694 17.42453,177.92862 10.698753,171.40221 4.308029,164.1915 3.222922,161.9048 0.59485655,156.36656 0.77123211,148.01484 3.6459201,141.875 5.2276965,138.4966 27.819865,115.12349 73.305967,69.807012 137.9545,5.3995645 140.86054,2.6907076 146.5625,1.5210474 c 3.85426,-0.79063541 8.02074,-0.79063541 11.875,0 5.70196,1.1696602 8.608,3.8785171 73.25654,68.2859646 45.4861,45.316478 68.07826,68.689588 69.66003,72.067988 2.86124,6.11109 3.05384,14.48572 0.45892,19.95412 -1.06535,2.24508 -7.11223,9.15639 -13.4375,15.35849 -12.95838,12.70604 -17.71613,15.00201 -27.93858,13.48248 -5.90452,-0.87768 -6.89637,-1.73115 -38.20105,-32.87143 l -32.13914,-31.97034 -0.36086,72.39834 c -0.41107,82.47211 0.24879,77.57321 -11.42047,84.78776 -5.68219,3.51303 -6.64914,3.6859 -22.43923,4.01175 -9.07564,0.18729 -18.5829,-0.0989 -21.12724,-0.63606 z"></path>
+        </svg>
+        <span class="hide-copy">  
+          To Top
+        </span>
+      </button>
       <div class="legal">  
         <span class="copyright">&copy; copyright 2018. All Rights Reserved. A.Y. Robinson</span>
       </div>
@@ -122,6 +185,10 @@
     ga('create', 'UA-5627977-1', 'auto');
     ga('send', 'pageview');
   </script>
+  <script src="js/jquery_2_2.js"></script>
+  <script src="js/imagesloaded.min.js"></script>
+  <script src="js/isotope.min.js"></script>
+  <script src="js/script.js"></script>
   <!-- <script src="js/script.min.js"></script> -->
 </body>
 </html>

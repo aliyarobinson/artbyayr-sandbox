@@ -660,10 +660,7 @@ img {
 .grid-sort .grid-sizer,
 .grid-sort .grid-item {
   float: left;
-  width: 35%;
-  margin: 0 0 20px;
-  margin-right: 0.5%;
-  border: solid 1px;
+  width: 32%;
   transition: 400ms;
 }
 .grid-sort .grid-sizer.active,
@@ -685,6 +682,12 @@ img {
   Footer Styles
 
 *******************************/
+.top-trigger .icon {
+  height: 40px;
+  width: 40px;
+  fill: #414042;
+}
+
 .site-footer {
   padding: 20px 0;
   color: #767676;
@@ -1391,33 +1394,9 @@ img {
     font-size: 20px;
   }
 
-  .resume .block {
-    width: 100%;
-    max-width: none;
-  }
-
-  .project .slanted-divider {
-    right: 70px;
-  }
-  .project:hover .slanted-divider,
-.project:hover .proj-title-block,
-.project:hover .proj-tools-block {
-    opacity: 0;
-  }
-  .project:hover .project-content .cta-block {
-    right: 25%;
-  }
-
-  .proj-year-block {
-    display: none;
-  }
-
-  .cta-btn {
-    width: 100%;
-  }
-
-  .project-content > * {
-    width: 30%;
+  .grid-sort .grid-item {
+    float: left;
+    width: 48%;
   }
 
   .site-footer .wrapper > .block {
@@ -1438,29 +1417,6 @@ img {
 .block-4-wide {
     width: 100%;
     max-width: none;
-  }
-
-  .project-content > * {
-    width: 50%;
-  }
-  .project-content .proj-year-block,
-.project-content .proj-tools-block {
-    opacity: 0;
-  }
-  .experience-mod .position-title {
-    padding-bottom: 0px;
-  }
-
-  .experience-mod .date {
-    position: relative;
-    right: 0;
-    top: 0;
-    float: none;
-    text-align: left;
-  }
-
-  .experience-mod .position-desc {
-    padding: 10px 0 0;
   }
 }
 @media screen and (max-width: 500px) {
