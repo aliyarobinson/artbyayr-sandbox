@@ -4,16 +4,17 @@ var AYR = AYR || {};
 
 (function(){
 
-  // If ontouchstart exists then set click handler to touchstart otherwise set clickhandler to click
-  // let clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
   let last_known_scroll_position = 0;
   let ticking = false;
   let siteHeader = document.querySelector('.site-header');
   let menuBtn = document.querySelector('.menu-btn');
+  let siteNav = document.querySelector('.site-nav');
   let topTrigger = $('.top-trigger');
   let gridTrigger = $('.grid-trigger');
   let gridNav = $('.grid-nav');
   let gridItem = document.querySelectorAll('.grid-item img');
+
+  // If ontouchstart exists then set click handler to touchstart otherwise set clickhandler to click
   let clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
 
   
@@ -25,7 +26,6 @@ var AYR = AYR || {};
 
     // filter items on button click
     $('.site-footer').on( 'click', '.top-trigger', function() {
-      console.log('t-top');
       AYR.scrollTop(0);
     });
 
@@ -50,7 +50,6 @@ var AYR = AYR || {};
       })
 
       // filter items on button click
-      // $('.grid-nav, .site-nav').on( 'click', 'button', function() {
       $(document).on( 'click', '[data-filter]', function() {
         console.log('tt');
         AYR.scrollTop(300);
@@ -61,7 +60,8 @@ var AYR = AYR || {};
       $( window ).resize(function() {
         $('.grid-fluid').isotope({
         // update columnWidth to a percentage of container width
-        masonry: { columnWidth: $('.grid-fluid').width() / 2 }
+        // masonry: { columnWidth: $('.grid-fluid').width() / 3 }
+        masonry: { columnWidth: '.grid-sizer' }
         });
       });
 
@@ -78,7 +78,7 @@ var AYR = AYR || {};
 
     var doSomething = (scroll_pos) => {
     // function doSomething(scroll_pos) {
-      if(AYR.isMobile() === false) {
+      // if(AYR.isMobile() === false) {
 
         
         if(last_known_scroll_position >= 100 ){
@@ -98,7 +98,7 @@ var AYR = AYR || {};
         if(last_known_scroll_position < 200 ){
           gridNav.removeClass('active');
         }
-      }
+      // }
     }
 
     window.addEventListener('scroll', function(e) {

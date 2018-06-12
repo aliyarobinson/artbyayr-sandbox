@@ -839,10 +839,10 @@ img {
   }
 
   .logo-wrapper {
-    width: 150px;
+    width: 138px;
     height: 120px;
     position: fixed;
-    top: 20px;
+    top: -7px;
     left: 10px;
     z-index: 20;
   }
@@ -862,6 +862,9 @@ img {
     border-style: none none solid;
     margin: 0;
     transition: 400ms;
+  }
+  .site-header.small .logo-wrapper {
+    top: 0;
   }
 
   .site-nav {
@@ -918,12 +921,8 @@ img {
     text-align: center;
   }
 
-  #content-holder {
-    margin: 170px 0 0;
-  }
-
-  .content-display-wrapper {
-    margin: 180px 0 0;
+  .content-container {
+    margin: 130px 0 0;
   }
 
   .homepage-intro .title {
@@ -935,7 +934,8 @@ img {
     font-size: 20px;
   }
 
-  .grid-sort .grid-item {
+  .grid-sort .grid-sizer,
+.grid-sort .grid-item {
     float: left;
     width: 48%;
   }
@@ -958,6 +958,12 @@ img {
 .block-4-wide {
     width: 100%;
     max-width: none;
+  }
+
+  .grid-sort .grid-sizer,
+.grid-sort .grid-item {
+    float: left;
+    width: 100%;
   }
 }
 @media screen and (max-width: 500px) {

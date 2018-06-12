@@ -815,10 +815,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
     top: 150px;
   }
   .logo-wrapper {
-    width: 150px;
+    width: 138px;
     height: 120px;
     position: fixed;
-    top: 20px;
+    top: -7px;
     left: 10px;
     z-index: 20;
   }
@@ -838,6 +838,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
     border-style: none none solid;
     margin: 0;
     transition: 400ms;
+
+    &.small {
+      .logo-wrapper {
+        top:0;
+      }
+    }
   }
 
   .site-nav {
@@ -897,13 +903,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
     text-align: center;
   }
 
-  #content-holder {
-    margin: 170px 0 0;
+  .content-container {
+    margin: 130px 0 0;
   }
+
+  // #content-holder {
+  //   margin: 170px 0 0;
+  // }
   
-  .content-display-wrapper {
-    margin: 180px 0 0;
-  }
+  // .content-display-wrapper {
+  //   margin: 180px 0 0;
+  // }
 
   .homepage-intro .title {
     font: 60px 'alex_brush', arial, sans-serif;
@@ -915,9 +925,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
   }
 
  
-  .grid-sort .grid-item { 
-    float: left;
-    width: 48%;
+  .grid-sort {
+   .grid-sizer, 
+   .grid-item { 
+      float: left;
+      width: 48%;
+    }
   }
   .site-footer .wrapper > .block {
     width: 100%;
@@ -941,6 +954,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767676', end
     max-width: none;
   }
 
+  .grid-sort {
+    .grid-sizer, 
+    .grid-item { 
+       float: left;
+       width: 100%;
+     }
+   }
  
 }
 
