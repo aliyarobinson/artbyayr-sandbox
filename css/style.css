@@ -692,7 +692,6 @@ img {
 .grid-sort .grid-item {
   float: left;
   width: 30%;
-  transition: 400ms;
 }
 .grid-sort .grid-sizer {
   border: none;
@@ -748,6 +747,7 @@ img {
   bottom: 50px;
   right: 40px;
   opacity: 0;
+  z-index: 20;
   transition: 400ms;
 }
 .top-trigger.active {

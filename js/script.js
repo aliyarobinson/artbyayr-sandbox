@@ -22,7 +22,7 @@ var AYR = AYR || {};
 
     init: function() {
 
-    $(window).trigger('resize');
+    // $(window).trigger('resize');
 
     // filter items on button click
     $('.site-footer').on( 'click', '.top-trigger', function() {
@@ -54,7 +54,9 @@ var AYR = AYR || {};
         console.log('tt');
         AYR.scrollTop(300);
         let filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
+        $grid.isotope({ 
+          filter: filterValue,
+          layoutMode: 'fitRows' });
       });
 
       $( window ).resize(function() {
