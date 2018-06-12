@@ -37,10 +37,9 @@
       
       <nav class="site-nav" role="navigation">
         <ul>
-          <!-- <li><a href="art.html" class="grid-filter">Art</a></li>
-          <li><a href="interactive.html" class="grid-filter">Interactive</a></li> -->
-          <li><button data-filter=".art">Art</button></li>
-          <li><button data-filter=".interactive">Interactive</button></li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
           <li>
             <a href="https://www.redbubble.com/people/artbyayr" target="_blank">Shop 
               <span aria-hidden="true" class="icon fa fa-external-link-alt"></span>
@@ -58,61 +57,94 @@
           
       </section>
       <section class="grid-sort wrapper">
-        
+        <nav class="grid-nav">
+          <ul>
+            <li class="grid-trigger"><button data-filter="*">All</button></li>
+            <li class="grid-trigger"><button data-filter=".art">Art</a></li>
+            <li class="grid-trigger"><button data-filter=".interactive">Interactive</a></li>
+          </ul>
+        </nav>
         <ul class="grid-fluid">
           <div class="grid-sizer"></div>
           <li class="grid-item digital art">
             <a href="#">
               <img src="./img/art/seduction-painting-trans-1.png" alt="seduction painting">
-              <span class="item-title">Seduction</span>
             </a>
+            <ul class="tag-list">
+              <li><button data-filter=".art">art</button></li>
+              <li><button data-filter=".digital">digital</button></li>
+            </ul>
           </li>
           <li class="grid-item wordpress interactive">
             <a href="#">
               <img src="./img/interactive/pjtwebsite.png" alt="project tsehigh">
-              <span class="item-title">Project Tsehigh</span>
             </a>
+            <ul class="tag-list">
+              <li><button data-filter=".interactive">interactive</button></li>
+              <li><button data-filter=".wordpress">wordpress</button></li>
+            </ul>
           </li>
           <li class="grid-item digital art">
             <a href="#">
               <img src="./img/art/TheLightbulb_3.png" alt="Aliya Robinson">
-              <span class="item-title">Solar Flare</span>
             </a>
+            <ul class="tag-list">
+              <li><button data-filter=".art">art</button></li>
+              <li><button data-filter=".digital">digital</button></li>
+            </ul>
           </li>
           <li class="grid-item sketch art">
             <a href="#">
               <img src="./img/art/in-my-dreams.jpg" alt="in my dreams">
-              <span class="item-title">In My Dreams</span>
             </a>
+            <ul class="tag-list">
+              <li><button data-filter=".art">art</button></li>
+              <li><button data-filter=".sketch">sketch</button></li>
+            </ul>
           </li>
           <li class="grid-item wordpress interactive">
             <a href="#">
               <img src="./img/interactive/oksanatanasiv.png" alt="oksana tanasiv">
-              <span class="item-title">Oksana Tanasiv</span>
             </a>
+            <ul class="tag-list">
+              <li><button data-filter=".interactive">interactive</button></li>
+              <li><button data-filter=".wordpress">wordpress</button></li>
+            </ul>
           </li>
           <li class="grid-item github-page interactive">
             <a href="#">
               <img src="./img/interactive/aliyarobinson.png" alt="Aliya Robinson">
-              <span class="item-title">Aliya Robinson (previous website)</span>
             </a>
+            <ul class="tag-list">
+              <li><button data-filter=".interactive">interactive</button></li>
+              <li><button data-filter=".github-page">github-page</button></li>
+            </ul>
           </li>
           <li class="grid-item sketch art">
             <a href="#">
               <img src="./img/art/birds-eye-view.jpg" alt="Hakim Robinson">
-              <span class="item-title">Birds Eye View</span>
             </a>
+            <ul class="tag-list">
+              <li><button data-filter=".art">art</button></li>
+              <li><button data-filter=".sketch">sketch</button></li>
+            </ul>
           </li><li class="grid-item digital art">
             <a href="#">
               <img src="./img/art/wolf-mountain_sm.png" alt="Hakim Robinson">
-              <span class="item-title">Aries Wolf</span>
             </a>
+            <ul class="tag-list">
+              <li><button data-filter=".art">art</button></li>
+              <li><button data-filter=".digital">digital</button></li>
+            </ul>
           </li>
           <li class="grid-item github-page interactive">
             <a href="#">
               <img src="./img/interactive/hakimrobinson.png" alt="Hakim Robinson">
-              <span class="item-title">Hakim Robinson</span>
             </a>
+            <ul class="tag-list">
+              <li><button data-filter=".interactive">interactive</button></li>
+              <li><button data-filter=".github-page">github-page</button></li>
+            </ul>
           </li>
         </ul>
         

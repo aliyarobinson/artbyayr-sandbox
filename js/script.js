@@ -49,7 +49,8 @@ var AYR = AYR || {};
       })
 
       // filter items on button click
-      $('.grid-nav, .site-nav').on( 'click', 'button', function() {
+      // $('.grid-nav, .site-nav').on( 'click', 'button', function() {
+      $(document).on( 'click', '[data-filter]', function() {
         console.log('tt');
         AYR.scrollTop(300);
         let filterValue = $(this).attr('data-filter');
