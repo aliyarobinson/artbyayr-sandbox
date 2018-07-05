@@ -120,12 +120,12 @@ var AYR = AYR || {};
     //   this.parentNode.parentNode.classList.toggle('active');
     // });
 
-    for (let i = 0; i < gridItem.length; i++) {
-      gridItem[i].addEventListener(clickHandler, function(e) { 
-        e.preventDefault();
-        this.parentNode.parentNode.classList.toggle('active');
-      }, false);
-    }
+    // for (let i = 0; i < gridItem.length; i++) {
+    //   gridItem[i].addEventListener(clickHandler, function(e) { 
+    //     e.preventDefault();
+    //     this.parentNode.parentNode.classList.toggle('active');
+    //   }, false);
+    // }
 
     /**************************************/
     /*   Mobile Navigation Trigger
